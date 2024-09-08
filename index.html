@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Guess My Number!</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f8ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      header {
+        text-align: center;
+        background-color: #2d5c2e;
+        color: #fff;
+        padding: 10px;
+        width: 80%;
+        max-width: 800px;
+        border-radius: 10px;
+        /* width: 50%; */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      header h1 {
+        margin: 0;
+      }
+
+      .between {
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+
+      .btn {
+        background-color: #2a442b;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+      }
+
+      .btn:hover {
+        background-color: #45a049;
+      }
+
+      /* Main Layout */
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+      }
+
+      .left,
+      .right {
+        flex: 1;
+        margin: 20px;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      input {
+        padding: 10px;
+        font-size: 1em;
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 10px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .right {
+        text-align: center;
+      }
+
+      .message {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .label-score,
+      .label-highscore {
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+
+      .label-score span,
+      .label-highscore span {
+        font-weight: bold;
+        color: #333;
+      }
+
+      /* Styling for the number display */
+      .number {
+        font-size: 5em;
+        font-weight: bold;
+        color: #333;
+        border: 3px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        width: 100px;
+        margin: 20px auto;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: #f9f9f9;
+      }
+      footer {
+        background-color: #2a442b;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        /* width: 100%; */
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+        width: 80%;
+        max-width: 800px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Guess My Number!</h1>
+      <p class="between">(Between 1 and 20)</p>
+      <button class="btn again">Again!</button>
+      <div class="number">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <input type="number" class="guess" />
+        <button class="btn check">Check!</button>
+      </section>
+      <section class="right">
+        <p class="message">Start guessing...</p>
+        <p class="label-score">💯 Score: <span class="score">20</span></p>
+        <p class="label-highscore">
+          🥇 Highscore: <span class="highscore">0</span>
+          <input type="number" class="guess" />
+        </p>
+      </section>
+    </main>
+    <footer>Developed by Mr. Yonas Debru, 2024</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
